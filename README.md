@@ -1,2 +1,2 @@
-# onePage-creative-agency
-Personal project of a site one page on a creative agency
+# onePage-Restaurant
+Personal project of a site one page on a restaurant
