@@ -90,6 +90,7 @@ module.exports = (env, argv) => {
                         {
                             loader: 'url-loader',
                             options: {
+                                esModule: false,
                                 limit: 8192,
                                 name: (dev) ? 'img/[name].[ext]' : 'img/[name]-[hash:8].[ext]'
                             }
