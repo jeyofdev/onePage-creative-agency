@@ -1,1 +1,43 @@
 // variable overrides
+
+/* ============
+    COLORS
+============ */
+$white:    #fff !default;
+$black:    #000 !default;
+$gray:     #666564 !default;
+
+$orange:  #d25b38 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "orange":     $orange,
+    "white":      $white,
+    "black":      $black
+  ),
+  $colors
+);
+
+$primary:       $orange !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary
+  ),
+  $theme-colors
+);
+
+
+
+/* ===========
+    FONTS
+=========== */
+$font-family-sans-serif:     'Open Sans', sans-serif !default;
+$font-family-cursive:        'Bebas Neue', cursive !default;
+$font-family-base:            $font-family-sans-serif !default;
+
+$font-size-base:    rem(16, $base: 16) !default;

@@ -1,1 +1,29 @@
-// custom
+.btn {
+  font-family: $font-family-cursive;
+  font-weight: bold;
+  font-size: rem(20);
+  color: $white;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: rem(2);
+  border-radius: 0;
+  padding: rem(12) rem(20);
+
+  @include media-breakpoint-up(md) {
+    font-size: rem(36);
+    padding: rem(20) rem(45);
+  }
+}
+
+h1 {
+  font-family: $font-family-cursive;
+  font-weight: bold;
+  line-height: 1;
+}
+
+p {
+  font-family: $font-family-base;
+  font-size: rem(16);
+  color: $gray;
+  line-height: 1;
+}

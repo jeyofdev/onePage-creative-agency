@@ -1,0 +1,60 @@
+/* ==================
+    SECTION HOME
+================== */
+#home {
+  background: url(../img/bg-home.jpg) no-repeat;
+  background-position: center right;
+  background-size: cover;
+  padding-top: rem(56);
+
+  @media (max-height: 570px) {
+    margin-top: rem(20);
+    padding-bottom: rem(20);
+  }
+
+  @include media-breakpoint-up(md) {
+    background-position: center center;
+  }
+}
+
+
+
+/* =================
+    HOME TITLE
+================= */
+#home .home-title {
+  font-size: rem(57);
+  color: $white;
+  text-transform: uppercase;
+  margin-bottom: 0;
+
+  > span {
+    display: block;
+
+    > strong {
+      color: $primary;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: rem(90);
+  }
+}
+
+
+
+/* ==================
+    HOME CONTENT
+================== */
+#home .home-intro {
+  font-style: italic;
+  font-size: rem(18);
+  color: $white;
+  line-height: 1.2;
+  margin: rem(24) 0 rem(40);
+
+  @include media-breakpoint-up(md) {
+    font-size: rem(25);
+    margin: rem(50) 0 rem(80);
+  }
+}
