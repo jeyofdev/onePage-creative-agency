@@ -17,15 +17,22 @@
 
 h1,
 h2,
-h5 {
+h3,
+h4,
+h5,
+h6 {
   font-family: $font-family-cursive;
   font-weight: bold;
   line-height: 1;
   margin: 0;
 }
 
+h4 {
+  font-size: rem(36);
+}
+
 h5 {
-  font-size: 25px;
+  font-size: rem(25);
 }
 
 p {
