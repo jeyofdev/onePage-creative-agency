@@ -37,6 +37,7 @@
     CARDS CONTENT
 =================== */
 #team .card {
+  background: transparent;
   padding: 0;
   border: none;
   border-radius: 0;
@@ -49,7 +50,6 @@
 #team .card .card-body {
   padding: 0 rem(18);
   margin-top: rem(50);
-  margin-bottom: rem(50);
 
   .card-title {
     margin-bottom: rem(23);
