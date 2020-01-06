@@ -15,15 +15,24 @@
   }
 }
 
-h1 {
+h1,
+h2,
+h5 {
   font-family: $font-family-cursive;
   font-weight: bold;
   line-height: 1;
+  margin: 0;
+}
+
+h5 {
+  font-size: 25px;
 }
 
 p {
   font-family: $font-family-base;
   font-size: rem(16);
+  font-style: normal;
   color: $gray;
-  line-height: 1;
+  line-height: 1.2;
+  margin: 0;
 }

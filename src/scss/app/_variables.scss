@@ -3,9 +3,12 @@
 /* ============
     COLORS
 ============ */
-$white:    #fff !default;
-$black:    #000 !default;
-$gray:     #666564 !default;
+$white:     #fff !default;
+$black:     #000 !default;
+$gray:      #666564 !default;
+$gray-dark: #454443 !default;
+$gray-500:  #636363 !default;
+$light:     #f4f2f2 !default;
 
 $orange:  #d25b38 !default;
 
@@ -15,18 +18,24 @@ $colors: map-merge(
   (
     "orange":     $orange,
     "white":      $white,
-    "black":      $black
+    "black":      $black,
+    "gray":       $gray,
+    "gray-dark":  $gray-dark,
+    "gray-500":   $gray-500,
+    "light":      $light
   ),
   $colors
 );
 
 $primary:       $orange !default;
+$secondary:     $gray-500 !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
   (
-    "primary":    $primary
+    "primary":     $primary,
+    "secondary":   $secondary
   ),
   $theme-colors
 );
@@ -41,3 +50,16 @@ $font-family-cursive:        'Bebas Neue', cursive !default;
 $font-family-base:            $font-family-sans-serif !default;
 
 $font-size-base:    rem(16, $base: 16) !default;
+
+
+
+/* ======================
+    GRID BREAKPOINTS
+====================== */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 568px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
