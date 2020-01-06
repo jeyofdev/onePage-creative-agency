@@ -29,13 +29,15 @@ $colors: map-merge(
 
 $primary:       $orange !default;
 $secondary:     $gray-500 !default;
+$gray-dark:     $gray-dark !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
   (
     "primary":     $primary,
-    "secondary":   $secondary
+    "secondary":   $secondary,
+    "gray-dark":   $gray-dark
   ),
   $theme-colors
 );
