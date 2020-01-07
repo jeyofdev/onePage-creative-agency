@@ -1,0 +1,245 @@
+/* =====================
+    SECTION CONTENT
+===================== */
+@include media-breakpoint-up(lg) {
+  #news .content {
+    flex: 0 0 72%;
+    max-width: 72%;
+  }
+}
+
+
+
+/* =====================
+    POSTS CONTAINER
+===================== */
+#news .last-posts,
+#news .last-post {
+  margin: 0 auto;
+
+  @include media-breakpoint-down(sm) {
+    max-width: 380px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+#news .last-post {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 0;
+
+  @include media-breakpoint-up(lg) {
+    .row {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+
+
+/* =================
+    SINGLE POST
+================= */
+#news .single-post,
+#news .single-last-post {
+  margin-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 20px;
+  }
+}
+
+#news .single-post {
+  @include media-breakpoint-up(lg) {
+    &:last-child {
+      margin-bottom: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+#news .single-last-post {
+  margin-bottom: 0;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+  }
+}
+
+
+
+/* ======================
+    SINGLE POST CARD
+====================== */
+#news .card {
+  border: none;
+  border-radius: 0;
+
+  .card-body {
+    padding: 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  #news .single-last-post .card {
+    display: flex;
+    align-items: stretch;
+    flex-direction: inherit;
+    width: 100%;
+  }
+}
+
+
+
+/* ==============================
+    SINGLE POST FEATURED IMG
+============================== */
+@include media-breakpoint-up(lg) {
+  #news .single-last-post .row {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+  }
+}
+
+#news .single-post,
+#news .single-last-post {
+  .card .featured-img {
+    display: flex;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 150px;
+    margin-bottom: 20px;
+    padding-left: rem(18);
+    padding-bottom: rem(13);
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 10px;
+      padding-bottom: 8px;
+    }
+  }
+}
+
+#news .single-last-post .card .featured-img {
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    align-items: flex-start;
+    height: 100%;
+    padding: rem(13) rem(18) 0;
+  }
+}
+
+#news .single-post {
+  &:first-child .card .featured-img { 
+    background-image: url(../img/blog/post-1.jpg);
+  }
+
+  &:nth-child(2) .card .featured-img { 
+    background-image: url(../img/blog/post-2.jpg);
+  }
+
+  &:last-child .card .featured-img { 
+    background-image: url(../img/blog/post-3.jpg);
+  }
+}
+
+#news .single-last-post .card .featured-img { 
+  background-image: url(../img/blog/post-4.jpg);
+  background-position: top center;
+}
+
+
+
+/* =========================
+    SINGLE POST CONTENT
+========================= */
+#news .card .post-content {
+  padding: 0 20px;
+}
+
+@include media-breakpoint-up(lg) {
+  #news .single-last-post .card .post-content {
+    display: block;
+
+    .card-body {
+      position: absolute;
+      width: calc(100% - 36px);
+      bottom: 0;
+      margin-bottom: 13px;
+    }
+  }
+}
+
+
+
+/* =========================
+    SINGLE POST CONTENT
+========================= */
+#news .card-body .card-title {
+  margin-bottom: rem(16);
+}
+
+#news .featured-img .date {
+  display: inline-block;
+  padding: 6px 8px;
+
+  span {
+    display: block;
+
+    &:first-child {
+      font-family: $font-family-cursive;
+      font-size: 50px;
+      font-weight: bold;
+      line-height: 1;
+    }
+  
+    &:last-child {
+      font-family: $font-family-sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    @include media-breakpoint-up(lg) {
+      &:first-child {
+        font-size: 40px;
+      }
+    
+      &:last-child {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  #news .single-last-post .card-title {
+    color: $white !important;
+  }
+
+  #news .single-last-post .card-text {
+    color: $white !important;
+    text-shadow: 1px 0 0 $dark;
+  }
+}
