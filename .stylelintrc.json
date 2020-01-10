@@ -8,7 +8,8 @@
         "block-closing-brace-newline-after": ["always", {
             "ignoreAtRules": ["if", "else", "elseif"]
         }],
-        "max-empty-lines": 3
+        "max-empty-lines": 3,
+        "no-duplicate-selectors": null
     },
     "indentation": 2
 }

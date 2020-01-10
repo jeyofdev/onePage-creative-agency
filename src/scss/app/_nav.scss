@@ -1,0 +1,253 @@
+/* ============
+    NAVBAR
+============ */
+.navbar {
+  position: fixed;
+  background: transparent;
+  width: 100%;
+  height: 90px;
+  top: 0;
+  left: 0;
+  padding: 0;
+  z-index: 1;
+
+  &.top-nav-collapse {
+    background: $black;
+    height: 75px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 140px;
+
+    &.top-nav-collapse {
+      padding: 0;
+      height: 70px;
+    }
+  }
+}
+
+.navbar-nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/* =================
+    NAVBAR LOGO
+================= */
+.navbar .logo {
+  position: relative;
+  width: 40%;
+  max-width: 250px;
+  margin-top: 0;
+  z-index: 1;
+
+  img {
+    width: 100%;
+    margin: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: 200px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 20%;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 30%;
+  }
+}
+
+.top-nav-collapse.logo {
+  @include media-breakpoint-up(md) {
+    margin-top: 30px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: 180px;
+  }
+}
+
+
+
+/* =================
+    BURGER MENU
+================= */
+.navbar-trigger {
+  position: relative;
+  display: block;
+  background: $black;
+  width: 40px;
+  height: 40px;
+  padding: 8.8px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 100%;
+  outline: none;
+  z-index: 1;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .top-nav-collapse .navbar-trigger {
+    margin-top: 5px;
+  }
+}
+
+.navbar .navbar-trigger {
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  .icon-bar {
+    display: block;
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: $white;
+    border-radius: 1px;
+    transition: all .3s ease-in-out;
+
+    + .icon-bar {
+      margin-top: 6px;
+    }
+  }
+
+  &:hover .icon-bar {
+    background-color: $white;
+  }
+
+  &.is-active {
+    transition: all .3s ease-in-out;
+    transition-delay: .6s;
+    transform: rotate(45deg);
+    border: 1px solid $white;
+
+    .icon-bar {
+      transition: all .3s ease-in-out;
+
+      &:nth-child(2) {
+        width: 0;
+      }
+
+      &:first-child,
+      &:last-child {
+        transition-delay: .3s;
+      }
+
+      &:first-child {
+        transform: translateY(7px);
+      }
+
+      &:last-child {
+        transform: translateY(-9px) rotate(90deg);
+      }
+    }
+  }
+}
+
+
+
+/* =================
+    NAVBAR NAV
+================= */
+.navbar .navbar-nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background: $black;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform .5s ease-in-out;
+  overflow: auto;
+
+  &.show {
+    transform: translateX(0);
+  }
+
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    align-items: flex-end;
+    background: transparent;
+    width: auto;
+    height: auto;
+    min-height: 56px;
+    padding-top: 30px;
+    transform: translateX(0);
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .top-nav-collapse .navbar-nav {
+    padding-top: 0;
+  }
+}
+
+
+
+/* ======================
+    NAVBAR NAV ITEMS
+====================== */
+.navbar .navbar-items {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  transform: translateY(-50%);
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    width: auto;
+    transform: translateY(0);
+  }
+}
+
+.top-nav-collapse .navbar-items {
+  @include media-breakpoint-up(lg) {
+    margin-top: 10px;
+  }
+}
+
+
+
+/* ==================
+    NAVBAR LINKS
+================== */
+.navbar .navbar-items .nav-item .nav-link {
+  text-transform: uppercase;
+  font-size: 36px;
+  color: $white;
+  transition: border .3s ease-in-out;
+  padding: rem(5) rem(16);
+
+  &:hover {
+    background: $white;
+    color: $dark;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &.active {
+      border-bottom: 4px solid $white;
+    }
+  }
+}

@@ -93,7 +93,7 @@
     ITEM SEPARATOR
 ==================== */
 #about .section-content > .item > div {
-  &:after {
+  &::after {
     content: '';
     background: $white;
     height: 1px;
@@ -101,24 +101,24 @@
   }
 
   @include media-breakpoint-down(sm) {
-    &.item-content:after {
+    &.item-content::after {
       display: block;
     }
   }
 
   @include media-breakpoint-up(md) {
-    &.item-title:after {
+    &.item-title::after {
       display: block;
     }
   }
 }
 
-#about .section-content > .item:last-child .item-content:after {
+#about .section-content > .item:last-child .item-content::after {
   display: none;
 }
 
 @include media-breakpoint-up(md) {
-  #about .section-content > .item:last-child .item-title:after {
+  #about .section-content > .item:last-child .item-title::after {
     display: none;
   }
 }

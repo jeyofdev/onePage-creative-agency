@@ -8,7 +8,8 @@
   padding-top: rem(56);
 
   @media (max-height: 570px) {
-    margin-top: rem(20);
+    margin-top: 0;
+    padding-top: rem(100);
     padding-bottom: rem(20);
   }
 
