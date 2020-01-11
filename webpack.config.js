@@ -152,7 +152,7 @@ module.exports = (env, argv) => {
             new plugins.extractCss({
                 filename: (dev) ? 'css/[name].css' : 'css/[name]-[hash:8].css'
             }),
-            // new plugins.styleLint()
+            new plugins.styleLint()
         ]
     }
 

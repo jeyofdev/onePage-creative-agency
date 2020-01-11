@@ -240,7 +240,7 @@
   transition: border .3s ease-in-out;
   padding: rem(5) rem(16);
 
-  @media (orientation: landscape) and (max-height : 350px) {
+  @media (orientation: landscape) and (max-height: 350px) {
     font-size: rem(28);
   }
 
