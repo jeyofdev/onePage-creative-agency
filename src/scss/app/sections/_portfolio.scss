@@ -1,0 +1,182 @@
+/* =======================
+    SECTION PORTFOLIO
+======================= */
+@include media-breakpoint-up(lg) {
+  #portfolio {
+    padding: 0;
+
+    .container > .row {
+      position: relative;
+    }
+  }
+}
+
+
+
+/* ===================
+    SECTION TITLE
+=================== */
+@include media-breakpoint-up(lg) {
+  #portfolio .portfolio-title {
+    position: absolute;
+    bottom: 0;
+    margin-left: 25%;
+    margin-bottom: rem(40);
+    padding-left: rem(30);
+    z-index: 1;
+
+    .section-title {
+      font-size: rem(60);
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  #portfolio .portfolio-title .section-title {
+    font-size: rem(75);
+  }
+}
+
+
+
+/* =====================
+    PORTFOLIO ITEMS
+===================== */
+#portfolio .portfolio-item,
+#portfolio .portfolio-items {
+  display: flex;
+  justify-content: center;
+  margin-bottom: rem(20);
+  padding: 0;
+  overflow: hidden;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+  }
+}
+
+#portfolio .portfolio-items {
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-bottom: 0;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+  }
+}
+
+#portfolio .portfolio-items .row {
+  margin: 0;
+
+  .portfolio-item {
+    margin-bottom: rem(20);
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 100%;
+
+    .portfolio-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+/* ===========
+    ITEMS
+=========== */
+#portfolio .portfolio-item .item {
+  position: relative;
+  outline: none;
+
+  @include media-breakpoint-up(lg) {
+    height: 100%;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+
+/* ===================
+    ITEMS CONTENT
+=================== */
+#portfolio .item .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all .3s ease-out;
+  z-index: 0;
+}
+
+#portfolio .item .item-info {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%);
+  overflow: hidden;
+
+  .item-title {
+    font-size: rem(24);
+    letter-spacing: 2px;
+    transform: translateY(-100%);
+    transition: all .3s ease-out;
+  }
+
+  .item-separator {
+    width: 0;
+    height: 1px;
+    margin: rem(11.5) auto;
+    transition: all .5s ease-out;
+  }
+
+  .item-date {
+    transform: translateY(100%);
+    transition: all .3s ease-out;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  #portfolio .item .img-full {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+
+
+/* =========================
+    ITEMS CONTENT HOVER
+========================= */
+#portfolio .item:hover .mask {
+  opacity: .75;
+  transition: all .3s ease-out;
+
+  .item-info {
+    opacity: 1;
+
+    .item-title {
+      transform: translateY(0);
+    }
+
+    .item-separator {
+      width: 95%;
+    }
+
+    .item-date {
+      transform: translateY(0);
+    }
+  }
+}
